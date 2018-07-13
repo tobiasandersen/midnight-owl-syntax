@@ -1,0 +1,126 @@
+.theme-midnight-owl-syntax {
+
+  /* Scrollbars */
+  &.scrollbars-visible-always {
+    ::-webkit-scrollbar-corner,
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #183954;
+      border-radius: 5px;
+    }
+
+    .tree-view {
+      &::-webkit-scrollbar-corner,
+      &::-webkit-scrollbar-track {
+        background: #00111f;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background: #183954;
+      }
+    }
+  }
+
+  /* Tabs */
+  atom-workspace-axis.vertical {
+    .tab-bar,
+    .tab {
+      height: 30px!important;
+      line-height: 30px!important;
+    }
+
+    .tab-bar {
+      background-color: #011627;
+      border-bottom: 1px solid #262a39;
+      height: 30px;
+      line-height: 30px;
+
+      li {
+        background-color: #011627;
+        border-color: #262a39;
+        border-bottom: 1px solid #262a39;
+        color: rgba(255, 255, 255, .7);
+        height: 30px!important;
+        line-height: 30px!important;
+
+        &:after {
+          background-color: #c792ea;
+          height: 1px;
+          bottom: -1px;
+        }
+
+        &.active {
+          background-color: #102433;
+          color: rgba(255, 255, 255, 1);
+        }
+
+        > div:not(.close-icon)::before {
+          height: 30px!important;
+          line-height: 30px!important;
+        }
+      }
+    }
+  }
+
+  /* Tree View */
+  atom-panel-container .project-root,
+  .tree-view-root.full-menu.list-tree {
+    background: #00111f;
+  }
+
+  /* Status Bar */
+  atom-panel-container > atom-panel.panel-footer {
+    background: #00111f!important;
+    border-top: solid 1px rgba(39, 43, 57, 0.5)!important;
+
+    .status-bar {
+      top: 1px;
+    }
+
+    #status-bar-vim-mode-plus,
+    .line-ending-tile,
+    .encoding-status,
+    .grammar-status,
+    .deprecation-cop-status {
+      display: none;
+    }
+  }
+
+  /* Pane separators */
+  atom-pane-container atom-pane-axis.horizontal > atom-pane:not(:first-of-type) {
+    border-left: 2px solid #00101d;
+  }
+
+  atom-pane-container atom-pane-axis.vertical > atom-pane:not(:first-of-type) {
+    border-top: 2px solid #00101d;
+  }
+
+  /* Project title */
+  &.hide-title-bar.hide-project-tab atom-dock ol.tree-view-root > li > div {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #011627;
+    border-bottom: 1px solid #272b39;
+    height: 30px;
+    z-index: 10;
+
+    span {
+      top: 3px;
+      left: 70px;
+      position: absolute;
+      margin: 0;
+      font-weight: 500;
+      text-transform: uppercase;
+      font-size: 11px;
+      color: rgba(214, 222, 235, 0.74);
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
