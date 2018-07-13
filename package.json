@@ -1,7 +1,7 @@
 {
   "name": "midnight-owl-syntax",
   "theme": "syntax",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Adaption of Sarah Drasner's Night Owl VSCode theme for Atom",
   "keywords": [
     "syntax",
