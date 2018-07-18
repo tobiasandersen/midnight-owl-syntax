@@ -24,6 +24,43 @@
     }
   }
 
+  /* Gutter */
+  .gutter {
+    .line-number {
+      color: #4b6479;
+    }
+  }
+
+  /* Linting */
+  .gutter[gutter-name='linter-ui-default'] {
+    margin-right: 0;
+    background: transparent;
+    min-width: 0;
+    overflow: visible;
+
+    .cursor-line {
+      display: none;
+    }
+
+    .linter-gutter-error {
+      position: relative;
+      left: -9px;
+      top: -3px;
+    }
+
+    .linter-gutter.icon::before {
+      font-size: 5px;
+      height: 5px;
+      width: 5px;
+    }
+  }
+
+  .syntax--readwrite .linter-highlight.linter-error,
+  .syntax--shorthandpropertyname .linter-highlight.linter-error {
+    background: none;
+    opacity: .65
+  }
+
   /* Tabs */
   atom-workspace-axis.vertical {
     .tab-bar,
